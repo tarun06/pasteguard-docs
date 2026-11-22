@@ -1,0 +1,56 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE / Editor
+.vscode/
+.idea/
+.vs/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+
+# Logs
+*.log
+logs/
+
+# Build output
+bin/
+obj/
+out/
+dist/
+build/
+
+# Packages
+packages/
+node_modules/
+
+# Secrets / environment files
+.env
+.env.*
+*.pfx
+*.p12
+*.cer
+*.key
+*.pem
+
+# Local configuration
+local.settings.json
+appsettings.Local.json
+appsettings.Development.json
+
+# Archives
+*.zip
+*.7z
+*.rar
+
+# Generated files
+*.cache
+*.user
+*.suo
+
+# Keep public documentation and assets only

@@ -1,0 +1,200 @@
+name: Detector Request
+description: Request support for a new secret or sensitive-data detector
+title: "[Detector]: "
+labels:
+  - detector-request
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping expand PasteGuard detector coverage.
+
+        Use this form to request support for a new provider, credential type, or sensitive-data format.
+
+        **Never include a real credential, production secret, payment detail, identity number, customer data, or other sensitive information.**
+
+        Use synthetic examples only.
+
+  - type: input
+    id: provider
+    attributes:
+      label: Provider / Product
+      description: Enter the provider, platform, or product name.
+      placeholder: "Example: Databricks, Azure, ExampleCloud"
+    validations:
+      required: true
+
+  - type: input
+    id: credential-type
+    attributes:
+      label: Credential / Data Type
+      description: What type of secret or sensitive data should PasteGuard detect?
+      placeholder: "Example: API Token, Client Secret, Connection String"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Suggested Category
+      description: Select the closest category.
+      options:
+        - AI
+        - Cloud
+        - Source Control
+        - Database
+        - DevOps & Infrastructure
+        - Package Registry
+        - Messaging
+        - Monitoring & Observability
+        - SaaS
+        - Authentication
+        - Keys & Certificates
+        - Identity
+        - Email Service
+        - Generic Secret
+        - Sensitive Data
+        - Payment / Banking
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: docs
+    attributes:
+      label: Public Documentation
+      description: Provide a public link describing the credential or format.
+      placeholder: "https://example.com/docs/authentication"
+    validations:
+      required: false
+
+  - type: textarea
+    id: synthetic-example
+    attributes:
+      label: Synthetic Example
+      description: |
+        Provide a fake example that represents the format.
+
+        Do not paste a real credential.
+      placeholder: |
+        Example:
+        example_test_abcdefghijklmnopqrstuvwxyz123456
+    validations:
+      required: true
+
+  - type: textarea
+    id: config-example
+    attributes:
+      label: Example Configuration Context
+      description: |
+        Show how this secret commonly appears in configuration, using synthetic values only.
+      placeholder: |
+        Example:
+
+        {
+          "EXAMPLE_API_TOKEN": "example_test_abcdefghijklmnopqrstuvwxyz123456"
+        }
+      render: text
+    validations:
+      required: false
+
+  - type: input
+    id: expected-replacement
+    attributes:
+      label: Expected Safe Replacement
+      description: Suggest the placeholder PasteGuard should use.
+      placeholder: "Example: <EXAMPLE_API_TOKEN>"
+    validations:
+      required: false
+
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Use Case
+      description: Why would this detector be useful?
+      placeholder: |
+        Example:
+        Used by developers for CI/CD deployment and frequently copied from environment files.
+    validations:
+      required: true
+
+  - type: textarea
+    id: common-key-names
+    attributes:
+      label: Common Configuration Key Names
+      description: |
+        List common environment-variable or configuration-key names, if known.
+      placeholder: |
+        EXAMPLE_API_TOKEN
+        EXAMPLE_ACCESS_TOKEN
+        EXAMPLE_SECRET
+    validations:
+      required: false
+
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Detection Scope
+      description: How specific is the requested detector?
+      options:
+        - Provider-specific secret
+        - Generic credential type
+        - Connection string
+        - Private key / certificate
+        - Sensitive personal data
+        - Payment / banking data
+        - Not sure
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: formats
+    attributes:
+      label: Common Formats
+      description: Select any relevant formats.
+      options:
+        - label: Environment variable / .env
+        - label: JSON
+        - label: appsettings.json
+        - label: YAML
+        - label: Connection string
+        - label: Authorization header
+        - label: URL
+        - label: Plain text
+        - label: Other
+
+  - type: textarea
+    id: false-positive-notes
+    attributes:
+      label: False-Positive Considerations
+      description: |
+        If you know of common safe values that look similar, describe them here.
+
+        This helps improve detection quality.
+      placeholder: |
+        Example:
+        Short IDs use the same prefix but should not be treated as secrets.
+    validations:
+      required: false
+
+  - type: textarea
+    id: references
+    attributes:
+      label: Additional References
+      description: Add any other public documentation or relevant references.
+      placeholder: |
+        Public provider documentation, SDK documentation, or credential-format references.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Safety Confirmation
+      options:
+        - label: I confirm that the example values in this request are synthetic and are not real production credentials.
+          required: true
+        - label: I confirm that I have not included private keys, passwords, customer data, payment data, identity information, or other real sensitive information.
+          required: true
+        - label: I understand that PasteGuard's internal detector implementation is proprietary and this request is for public feature coverage only.
+          required: true

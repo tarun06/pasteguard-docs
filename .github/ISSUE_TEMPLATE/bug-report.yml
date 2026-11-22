@@ -1,0 +1,219 @@
+name: Bug Report
+description: Report a non-security bug in PasteGuard
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping improve PasteGuard.
+
+        Please use this form for normal product bugs only.
+
+        **Do not use this form for security vulnerabilities or sensitive bypass issues.**
+
+        Security issues should be reported privately to:
+
+        **hello@mindatwork.co.in**
+
+        Never include real passwords, API keys, tokens, private keys, payment data, identity information, customer data, or other production secrets.
+
+  - type: input
+    id: version
+    attributes:
+      label: PasteGuard Version
+      description: Enter the PasteGuard version where the issue occurs.
+      placeholder: "Example: 1.2.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: edition
+    attributes:
+      label: PasteGuard Edition
+      description: Which edition are you using?
+      options:
+        - Free
+        - Pro
+        - Organization
+        - Not sure
+    validations:
+      required: true
+
+  - type: input
+    id: windows-version
+    attributes:
+      label: Windows Version
+      description: Enter your Windows version.
+      placeholder: "Example: Windows 11 24H2"
+    validations:
+      required: true
+
+  - type: input
+    id: feature
+    attributes:
+      label: Feature / Area
+      description: Which part of PasteGuard is affected?
+      placeholder: "Example: Protected Apps, Trusted Apps, Detector, Secure Paste"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: Clearly describe the problem.
+      placeholder: |
+        Describe what happened and why you believe it is incorrect.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: Provide the smallest reproducible sequence.
+      placeholder: |
+        1. Open PasteGuard
+        2. Enable ...
+        3. Copy synthetic value ...
+        4. Paste into ...
+        5. Observe ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What should PasteGuard have done?
+      placeholder: |
+        Example:
+        The synthetic credential should be sanitized before paste.
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What actually happened?
+      placeholder: |
+        Example:
+        The synthetic credential was not sanitized.
+    validations:
+      required: true
+
+  - type: textarea
+    id: synthetic-data
+    attributes:
+      label: Synthetic Test Data
+      description: |
+        Provide synthetic test data only.
+
+        Never include a real secret or sensitive personal information.
+      placeholder: |
+        Example:
+        OPENAI_API_KEY=sk-proj-abcdefghijklmnopqrstuvwxyz123456
+    validations:
+      required: false
+
+  - type: dropdown
+    id: protection-state
+    attributes:
+      label: Protection Status
+      description: Was PasteGuard protection active?
+      options:
+        - Protection enabled
+        - Protection paused
+        - Not sure
+    validations:
+      required: true
+
+  - type: dropdown
+    id: destination-type
+    attributes:
+      label: Destination Classification
+      description: How was the destination configured?
+      options:
+        - Protected App
+        - Trusted App
+        - Blocked App
+        - No application policy
+        - Not sure
+    validations:
+      required: false
+
+  - type: input
+    id: application
+    attributes:
+      label: Destination Application
+      description: Enter the application where the issue occurred, if relevant.
+      placeholder: "Example: Microsoft Edge, Visual Studio, Teams"
+    validations:
+      required: false
+
+  - type: input
+    id: detector
+    attributes:
+      label: Detector
+      description: Enter the detector name if the issue relates to secret detection.
+      placeholder: "Example: OpenAI API Key"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: organization-managed
+    attributes:
+      label: Organization Managed
+      description: Is this device using PasteGuard Organization policy?
+      options:
+        - "No"
+        - "Yes"
+        - Not sure
+    validations:
+      required: true
+
+  - type: input
+    id: policy-version
+    attributes:
+      label: Organization Policy Version
+      description: If applicable, provide the active organization policy version.
+      placeholder: "Example: 3"
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Sanitized Logs
+      description: |
+        Add relevant logs if useful.
+
+        Remove all secrets and sensitive information before submitting.
+      render: text
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Add any additional details that may help reproduce the issue.
+      placeholder: |
+        Screenshots, application behavior, recent changes, or other useful context.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Safety Confirmation
+      options:
+        - label: I confirm that I have not included any real password, API key, access token, private key, payment information, identity information, or other production secret.
+          required: true
+        - label: I confirm that this report does not contain private customer or organization data.
+          required: true
+        - label: I understand that security vulnerabilities should be reported privately instead of through this public issue.
+          required: true

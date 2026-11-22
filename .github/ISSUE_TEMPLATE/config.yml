@@ -1,0 +1,18 @@
+blank_issues_enabled: false
+
+contact_links:
+  - name: Security Vulnerability
+    url: mailto:hello@mindatwork.co.in
+    about: Report security vulnerabilities privately. Do not disclose sensitive security issues in public GitHub issues.
+
+  - name: PasteGuard Documentation
+    url: https://github.com/
+    about: Review PasteGuard documentation before opening a new issue.
+
+  - name: PasteGuard Website
+    url: https://mindatwork.co.in
+    about: Visit the official Mind At Work website for PasteGuard product information.
+
+  - name: Get PasteGuard
+    url: https://apps.microsoft.com/detail/9nl0497qc6zk
+    about: Install PasteGuard for Windows from Microsoft Store.

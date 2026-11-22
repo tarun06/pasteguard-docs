@@ -1,0 +1,183 @@
+name: Feature Request
+description: Suggest a new PasteGuard feature or product improvement
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping improve PasteGuard.
+
+        Use this form for product features, workflow improvements, UX improvements, and other non-security requests.
+
+        For new secret or sensitive-data detector coverage, please use the **Detector Request** template instead.
+
+        Do not include real credentials, customer data, payment information, identity information, private organization configuration, or other sensitive information.
+
+  - type: input
+    id: feature-name
+    attributes:
+      label: Feature Name
+      description: Give the requested feature a short name.
+      placeholder: "Example: Temporary Trusted App"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Product Area
+      description: Which part of PasteGuard would this feature improve?
+      options:
+        - Clipboard Protection
+        - Protected Apps
+        - Trusted Apps
+        - Blocked Apps
+        - Secure Paste
+        - Detector Management
+        - Sensitive Data Protection
+        - Activity History
+        - System Tray
+        - Settings
+        - PasteGuard Free
+        - PasteGuard Pro
+        - PasteGuard Organization
+        - Organization Policy
+        - User Experience
+        - Performance
+        - Accessibility
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem / Need
+      description: Describe the problem this feature would solve.
+      placeholder: |
+        Example:
+        I occasionally need to allow a development tool to receive original clipboard content for a short period, but I do not want to permanently add it to Trusted Apps.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed Solution
+      description: Describe how you think PasteGuard should solve the problem.
+      placeholder: |
+        Example:
+        Allow a Trusted App entry to expire automatically after a user-selected duration.
+    validations:
+      required: true
+
+  - type: textarea
+    id: workflow
+    attributes:
+      label: Example Workflow
+      description: Describe how you would use this feature.
+      placeholder: |
+        1. Open PasteGuard
+        2. Select an application
+        3. Choose "Trust Temporarily"
+        4. Select 30 minutes
+        5. PasteGuard automatically removes the trust after 30 minutes
+    validations:
+      required: false
+
+  - type: dropdown
+    id: edition
+    attributes:
+      label: Intended Edition
+      description: Which PasteGuard edition should include this feature?
+      options:
+        - Free
+        - Pro
+        - Organization
+        - All editions
+        - Not sure
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: How Important Is This to Your Workflow?
+      options:
+        - Nice to have
+        - Useful
+        - Important
+        - Blocking an important workflow
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Current Workaround
+      description: What do you do today without this feature?
+      placeholder: |
+        Example:
+        I manually add and remove the application from Trusted Apps.
+    validations:
+      required: false
+
+  - type: textarea
+    id: security
+    attributes:
+      label: Security Considerations
+      description: |
+        If this feature changes security behavior, describe any risks or safeguards you think should be considered.
+      placeholder: |
+        Example:
+        The feature should never override an Organization policy that blocks local users from managing Trusted Apps.
+    validations:
+      required: false
+
+  - type: textarea
+    id: organization
+    attributes:
+      label: Organization / Enterprise Considerations
+      description: |
+        If relevant, explain how this feature should behave on organization-managed devices.
+      placeholder: |
+        Example:
+        Administrators should be able to disable this feature through policy.
+    validations:
+      required: false
+
+  - type: textarea
+    id: ui
+    attributes:
+      label: UI / UX Suggestion
+      description: Describe how you imagine the feature appearing in PasteGuard.
+      placeholder: |
+        Example:
+        Add a "Trust Temporarily" option beside "Add to Trusted Apps".
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Add any other useful information.
+      placeholder: |
+        Screenshots with sensitive information removed, similar product behavior, or other context.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      options:
+        - label: I have checked that this is not primarily a new detector request.
+          required: true
+        - label: I confirm that I have not included real credentials, customer data, payment information, identity information, or other sensitive data.
+          required: true
+        - label: I understand that feature availability and implementation may differ from this proposal.
+          required: true
