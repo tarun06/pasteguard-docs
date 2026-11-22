@@ -18,10 +18,10 @@ https://github.com/tarun06/pasteguard-docs/blob/main/assets/pasteguard-secret-de
 https://github.com/tarun06/pasteguard-docs/blob/2bae0a38d68fa3fdb750ff14668bacdabf80c2b9/assets/pasteguard-secret-detectors-plans.png
 
 ![WalkThrough]
-https://github.com/tarun06/pasteguard-docs/blob/2bae0a38d68fa3fdb750ff14668bacdabf80c2b9/assets/PasteGuard%20Walkthrough.mp4
+https://github.com/tarun06/pasteguard-docs/blob/2bae0a38d68fa3fdb750ff14668bacdabf80c2b9/assets/pasteguard-walkthrough.gif
 
 ![Demo]
-https://github.com/tarun06/pasteguard-docs/blob/2bae0a38d68fa3fdb750ff14668bacdabf80c2b9/assets/Pasteguard%20Demo.mp4 
+https://github.com/tarun06/pasteguard-docs/blob/2bae0a38d68fa3fdb750ff14668bacdabf80c2b9/assets/pasteguard-demo.gif
 
 ---
 
