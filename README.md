@@ -11,16 +11,17 @@ It detects sensitive clipboard content before it reaches the wrong application a
 > **No secret leaves your computer.**
 
 [Get PasteGuard from Microsoft Store]
-https://github.com/tarun06/pasteguard-docs/blob/main/assets/pasteguard-secret-detectors-plans.png.png 
+https://github.com/tarun06/pasteguard-docs/blob/main/assets/pasteguard-secret-detectors-plans.png
 
 ---
-![PasteGuard secret detectors and Free, Pro, Organization plans](https://github.com/tarun06/pasteguard-docs/blob/main/assets/pasteguard-secret-detectors-plans.png)
+![PasteGuard secret detectors and Free, Pro, Organization plans]
+https://github.com/tarun06/pasteguard-docs/blob/2bae0a38d68fa3fdb750ff14668bacdabf80c2b9/assets/pasteguard-secret-detectors-plans.png
 
 ![WalkThrough]
-https://github.com/tarun06/pasteguard-docs/blob/main/assets/PasteGuard%20Walkthrough.mp4
+https://github.com/tarun06/pasteguard-docs/blob/2bae0a38d68fa3fdb750ff14668bacdabf80c2b9/assets/PasteGuard%20Walkthrough.mp4
 
 ![Demo]
-https://github.com/tarun06/pasteguard-docs/blob/main/assets/Pasteguard%20Demo.mp4
+https://github.com/tarun06/pasteguard-docs/blob/2bae0a38d68fa3fdb750ff14668bacdabf80c2b9/assets/Pasteguard%20Demo.mp4 
 
 ---
 
